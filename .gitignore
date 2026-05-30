@@ -1,0 +1,38 @@
+.DS_Store
+Thumbs.db
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Runtime files
+storage/*
+!storage/.gitkeep
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# PHP dependencies if installed locally
+vendor/
+composer.phar
+
+# Node dependencies / build output
+node_modules/
+dist/
+build/
+
+# Flutter / Dart generated files
+mobile-app/.dart_tool/
+mobile-app/.packages
+mobile-app/.flutter-plugins
+mobile-app/.flutter-plugins-dependencies
+mobile-app/build/
+
+# IDE
+.idea/
+.vscode/

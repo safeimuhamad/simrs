@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /sim-rs/
+Options -Indexes
+
+# Keep old public URLs working, but expose one canonical public URL surface.
+RewriteCond %{THE_REQUEST} \s/+sim-rs/public(?:[/?\s]) [NC]
+RewriteRule ^public/?(.*)$ $1 [R=301,L,NE]
+
+# The root URL facade must not publish application source or private storage.
+RewriteRule ^(?:app|config|database|routes|storage)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
+
+# Public files remain outside the application source tree while their URLs stay clean.
+RewriteRule ^vendor/?$ public/index.php?route=vendor [QSA,L]
+RewriteRule ^vendor/daftar/?$ public/index.php?route=vendor/daftar [QSA,L]
+RewriteRule ^en/vendor/?$ public/index.php?route=en/vendor [QSA,L]
+RewriteRule ^en/vendor/register/?$ public/index.php?route=en/vendor/register [QSA,L]
+RewriteRule ^(frontend|assets|uploads)(/.*)?$ public/$1$2 [L]
+
+# The project root is a real directory, so route it before directory exclusions.
+RewriteRule ^$ public/index.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php?route=$1 [QSA,L]

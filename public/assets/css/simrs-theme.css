@@ -1,0 +1,1170 @@
+:root {
+    --simrs-navy: #082452;
+    --simrs-blue: #2563eb;
+    --simrs-cyan: #13b8c6;
+    --simrs-teal: #10b59f;
+    --simrs-green: #20bf73;
+    --simrs-orange: #f97316;
+    --simrs-red: #ef476f;
+    --simrs-purple: #8b5cf6;
+    --simrs-bg: #f7fbff;
+    --simrs-line: #dce7f4;
+    --simrs-muted: #64748b;
+}
+
+body.bg-body-bg {
+    background: var(--simrs-bg) !important;
+    color: #0f2147;
+}
+
+.simrs-auth-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 88% 10%, rgba(37, 99, 235, .12), transparent 28%),
+        linear-gradient(135deg, #edf7ff 0%, #ffffff 58%, #eef7fb 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(420px, .96fr);
+    gap: 48px;
+    padding: 56px 70px 42px;
+    position: relative;
+    overflow: hidden;
+}
+
+.simrs-auth-hero {
+    position: relative;
+    min-height: 720px;
+    border-radius: 0 0 46% 0;
+    overflow: hidden;
+    background: #e8f4ff;
+    box-shadow: 0 24px 70px rgba(8, 36, 82, .12);
+}
+
+.simrs-auth-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.02) brightness(1.05);
+}
+
+.simrs-auth-wave {
+    position: absolute;
+    inset: auto 0 0 0;
+    min-height: 370px;
+    background: rgba(255,255,255,.9);
+    border-radius: 0 55% 0 0;
+    padding: 58px 56px;
+    backdrop-filter: blur(12px);
+}
+
+.simrs-brand-mark {
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
+    display: inline-grid;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(135deg, var(--simrs-teal), var(--simrs-blue));
+    box-shadow: 0 14px 32px rgba(19,184,198,.26);
+}
+
+.simrs-brand-mark .material-symbols-outlined { font-size: 52px; }
+
+.simrs-auth-title {
+    color: var(--simrs-navy);
+    font-size: 40px;
+    font-weight: 800;
+    margin: 38px 0 20px;
+    letter-spacing: 0;
+}
+
+.simrs-auth-copy {
+    max-width: 430px;
+    color: var(--simrs-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.simrs-auth-copy::after {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 28px;
+    background: var(--simrs-teal);
+}
+
+.simrs-auth-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 560px;
+    margin-top: 42px;
+    padding: 24px 22px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 18px 44px rgba(8,36,82,.08);
+}
+
+.simrs-auth-benefit {
+    text-align: center;
+    color: var(--simrs-navy);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.simrs-auth-benefit span {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    color: var(--simrs-teal);
+    background: #eaf8fb;
+}
+
+.simrs-auth-card {
+    align-self: center;
+    justify-self: center;
+    width: min(100%, 620px);
+    border-radius: 24px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 26px 80px rgba(8,36,82,.12);
+    border: 1px solid rgba(220,231,244,.86);
+    padding: 52px 58px 34px;
+}
+
+.simrs-auth-card .simrs-brand-mark {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+}
+
+.simrs-auth-card .simrs-brand-mark .material-symbols-outlined { font-size: 46px; }
+
+.simrs-login-heading {
+    color: var(--simrs-navy);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.simrs-input-wrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--simrs-line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.simrs-input-wrap span {
+    width: 48px;
+    display: grid;
+    place-items: center;
+    color: var(--simrs-navy);
+}
+
+.simrs-input-wrap .form-control {
+    border: 0;
+    box-shadow: none;
+    height: 52px;
+}
+
+.simrs-login-btn {
+    height: 58px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2474f4, #1d4fe3);
+    font-weight: 800;
+    box-shadow: 0 14px 24px rgba(37,99,235,.24);
+}
+
+.btn {
+    min-height: 42px;
+    border-radius: 10px !important;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    letter-spacing: 0;
+    box-shadow: none;
+    transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    min-height: 34px;
+    border-radius: 8px !important;
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.btn.w-100 {
+    width: 100%;
+}
+
+.erp-btn {
+    min-height: 42px;
+    border-radius: 10px !important;
+    padding-inline: 18px;
+}
+
+.btn-primary,
+.btn-primary.text-white,
+button.btn-primary,
+a.btn-primary {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-teal), var(--simrs-blue)) !important;
+    box-shadow: 0 12px 24px rgba(16,181,159,.18);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #fff !important;
+    background: linear-gradient(135deg, #0ea592, #1f5fe8) !important;
+    box-shadow: 0 16px 28px rgba(37,99,235,.22);
+}
+
+.btn-outline-primary {
+    color: var(--simrs-blue) !important;
+    border-color: #bcd4ff !important;
+    background: #f8fbff !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-cyan), var(--simrs-blue)) !important;
+    box-shadow: 0 12px 24px rgba(37,99,235,.16);
+}
+
+.btn-light {
+    color: var(--simrs-navy) !important;
+    border-color: var(--simrs-line) !important;
+    background: #fff !important;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: var(--simrs-blue) !important;
+    border-color: #bcd4ff !important;
+    background: #f4f9ff !important;
+}
+
+.btn-success {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, #22c55e, var(--simrs-teal)) !important;
+    box-shadow: 0 12px 24px rgba(32,191,115,.18);
+}
+
+.btn-info,
+.btn-info.text-white {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-cyan), #0ea5e9) !important;
+    box-shadow: 0 12px 24px rgba(19,184,198,.18);
+}
+
+.btn-warning {
+    color: #7c3d00 !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, #fff4d6, #fbbf24) !important;
+}
+
+.btn-danger {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-red), #dc2626) !important;
+    box-shadow: 0 12px 24px rgba(239,71,111,.18);
+}
+
+.btn-outline-success {
+    color: #159b62 !important;
+    border-color: #b9efd1 !important;
+    background: #f2fff8 !important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus,
+.btn-outline-success:active {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, #22c55e, var(--simrs-teal)) !important;
+}
+
+.btn-outline-info {
+    color: #0e91a5 !important;
+    border-color: #b9eef5 !important;
+    background: #f0fdff !important;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus,
+.btn-outline-info:active {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-cyan), #0ea5e9) !important;
+}
+
+.btn-outline-warning {
+    color: #b45309 !important;
+    border-color: #fed7aa !important;
+    background: #fff8ed !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:focus,
+.btn-outline-warning:active {
+    color: #7c3d00 !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, #fff4d6, #fbbf24) !important;
+}
+
+.btn-outline-danger {
+    color: var(--simrs-red) !important;
+    border-color: #ffc7d4 !important;
+    background: #fff5f8 !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus,
+.btn-outline-danger:active {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: linear-gradient(135deg, var(--simrs-red), #dc2626) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--simrs-muted) !important;
+    border-color: var(--simrs-line) !important;
+    background: #fff !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+    color: var(--simrs-navy) !important;
+    border-color: #c8d7ea !important;
+    background: #f4f8fc !important;
+}
+
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+    opacity: .62;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.btn i,
+.btn .material-symbols-outlined {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.simrs-list-filter {
+    align-items: stretch;
+}
+
+.simrs-list-filter .form-control,
+.simrs-list-filter .form-select {
+    min-height: 48px;
+    border-radius: 10px;
+    border-color: var(--simrs-line);
+    color: var(--simrs-navy);
+    font-weight: 700;
+    padding: 10px 16px;
+}
+
+.simrs-list-filter .form-control::placeholder {
+    color: #94a3b8;
+}
+
+.simrs-list-filter .simrs-filter-actions {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.simrs-list-filter .simrs-filter-actions .btn {
+    min-height: 48px;
+    height: 48px;
+    flex: 1 1 0;
+    white-space: nowrap;
+}
+
+.simrs-list-filter .simrs-filter-actions .simrs-filter-reset {
+    flex: 0 0 auto;
+    min-width: 96px;
+}
+
+@media (min-width: 768px) {
+    .simrs-list-filter {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .simrs-list-filter > [class*="col-"] {
+        width: auto;
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .simrs-list-filter .simrs-filter-search {
+        flex: 1 1 420px;
+        max-width: 560px;
+        min-width: 260px;
+    }
+
+    .simrs-list-filter .simrs-filter-select {
+        flex: 0 0 230px;
+        max-width: 230px;
+    }
+
+    .simrs-list-filter .simrs-filter-actions {
+        flex: 0 0 auto;
+        max-width: none;
+    }
+
+    .simrs-list-filter .simrs-filter-actions .btn {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .simrs-list-filter .simrs-filter-actions .btn:not(.simrs-filter-reset) {
+        flex: 0 0 86px;
+        width: 86px;
+    }
+
+    .simrs-list-filter .simrs-filter-actions .simrs-filter-reset {
+        flex: 0 0 92px;
+        width: 92px !important;
+        min-width: 92px;
+        max-width: 92px;
+    }
+}
+
+#app-content {
+    position: relative;
+}
+
+#app-content.content-loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    background: rgba(244, 249, 253, .64);
+    backdrop-filter: blur(2px);
+}
+
+#app-content.content-loading::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    z-index: 31;
+    width: 34px;
+    height: 34px;
+    margin-left: -17px;
+    border: 3px solid #cfe3f7;
+    border-top-color: #13b8a6;
+    border-radius: 999px;
+    animation: simrs-spin .8s linear infinite;
+}
+
+@keyframes simrs-spin {
+    to { transform: rotate(360deg); }
+}
+
+#page-loader {
+    display: none !important;
+}
+
+@media (max-width: 767.98px) {
+    .simrs-list-filter .simrs-filter-actions {
+        width: 100%;
+    }
+}
+
+.simrs-test-users {
+    max-height: 210px;
+    overflow: auto;
+    border: 1px solid var(--simrs-line);
+    border-radius: 14px;
+    background: #f8fbff;
+}
+
+.simrs-test-users table { margin-bottom: 0; font-size: 12px; }
+.simrs-test-users td, .simrs-test-users th { padding: 8px 10px; white-space: nowrap; }
+
+.simrs-sidebar-logo {
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.simrs-sidebar-logo .simrs-brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+}
+
+.simrs-sidebar-logo .simrs-brand-mark .material-symbols-outlined { font-size: 30px; }
+
+.simrs-sidebar-title {
+    color: var(--simrs-navy);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.simrs-sidebar-subtitle {
+    color: var(--simrs-muted);
+    font-size: 11px;
+}
+
+.sidebar-area {
+    border-right: 1px solid var(--simrs-line);
+    background: rgba(255,255,255,.92) !important;
+}
+
+.menu-inner .menu-title {
+    margin: 12px 18px 6px;
+    color: #91a1b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.menu-vertical .menu-item {
+    margin-bottom: 2px !important;
+}
+
+.menu-inner .menu-link {
+    border-radius: 10px;
+}
+
+.menu-inner > .menu-item > .menu-link {
+    min-height: 38px;
+    margin: 1px 10px;
+    padding: 7px 12px !important;
+    gap: 10px;
+}
+
+.menu-inner > .menu-item > .menu-link .menu-icon {
+    width: 22px;
+    min-width: 22px;
+    font-size: 20px;
+    margin-right: 0;
+}
+
+.menu-inner > .menu-item.active > .menu-link,
+.menu-inner > .menu-item.open > .menu-link {
+    background: linear-gradient(135deg, #14b8a6, #0891b2) !important;
+    color: #fff !important;
+    min-height: 42px;
+    padding: 8px 14px !important;
+    border-radius: 10px;
+    box-shadow: 0 12px 26px rgba(20,184,166,.24);
+}
+
+.menu-inner > .menu-item.active > .menu-link .menu-icon,
+.menu-inner > .menu-item.open > .menu-link .menu-icon {
+    color: #fff !important;
+}
+
+.menu-vertical .menu-sub {
+    margin: 6px 8px 10px 34px !important;
+    padding-left: 0 !important;
+}
+
+.menu-vertical .menu-sub .menu-item {
+    margin: 0 0 4px !important;
+}
+
+.menu-vertical .menu-sub .menu-item .menu-link {
+    min-height: 34px !important;
+    padding: 7px 12px 7px 28px !important;
+    border-radius: 9px !important;
+    color: #475569 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.menu-vertical .menu-sub .menu-item .menu-link::before {
+    left: 10px !important;
+    top: 50% !important;
+    width: 7px !important;
+    height: 7px !important;
+    margin-top: -3.5px !important;
+    background: #b9c2cf !important;
+}
+
+.menu-vertical .menu-sub .menu-item.active > .menu-link,
+.menu-vertical .menu-sub .menu-item .menu-link.active,
+.menu-vertical .menu-sub .menu-item .menu-link:hover {
+    color: #0891b2 !important;
+    background: #e8fbf7 !important;
+}
+
+.menu-vertical .menu-sub .menu-item.active > .menu-link::before,
+.menu-vertical .menu-sub .menu-item .menu-link.active::before,
+.menu-vertical .menu-sub .menu-item .menu-link:hover::before {
+    background: #14b8a6 !important;
+}
+
+.simrs-topbar {
+    border-radius: 0 !important;
+    border-width: 0 0 1px 0 !important;
+    margin: 0 -12px 26px !important;
+    padding: 16px 28px !important;
+    box-shadow: none !important;
+}
+
+.simrs-top-search {
+    max-width: 520px;
+    width: 100%;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .simrs-sidebar-logo {
+    padding: 18px 9px;
+    justify-content: center;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .simrs-sidebar-logo > div:not(.simrs-brand-mark) {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    overflow: hidden;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .simrs-sidebar-logo .simrs-brand-mark {
+    width: 42px;
+    height: 42px;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .layout-menu {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .layout-menu .menu-inner > .menu-item > .menu-link {
+    justify-content: center;
+    margin-inline: 0;
+    padding-inline: 0 !important;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area .layout-menu .menu-item .menu-link .title,
+[sidebar-data-theme=sidebar-hide] .sidebar-area .layout-menu .menu-title,
+[sidebar-data-theme=sidebar-hide] .sidebar-area .layout-menu .menu-sub {
+    opacity: 0;
+    visibility: hidden;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .simrs-sidebar-logo {
+    padding: 20px 18px;
+    justify-content: flex-start;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .simrs-sidebar-logo > div:not(.simrs-brand-mark) {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .layout-menu {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .layout-menu .menu-inner > .menu-item > .menu-link {
+    justify-content: flex-start;
+    margin: 1px 10px;
+    padding: 7px 12px !important;
+}
+
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .layout-menu .menu-item .menu-link .title,
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .layout-menu .menu-title,
+[sidebar-data-theme=sidebar-hide] .sidebar-area:hover .layout-menu .menu-sub {
+    opacity: 1;
+    visibility: visible;
+}
+
+.simrs-top-search .form-control {
+    height: 40px;
+    border-radius: 9px;
+    border-color: var(--simrs-line);
+    padding-left: 40px;
+}
+
+.simrs-icon-btn {
+    width: 38px;
+    height: 38px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid var(--simrs-line);
+    border-radius: 50%;
+    color: var(--simrs-navy);
+    background: #fff;
+    position: relative;
+}
+
+.simrs-icon-btn .badge {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+}
+
+.simrs-dashboard-title h1 {
+    color: var(--simrs-navy);
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.simrs-dashboard-card {
+    border: 1px solid var(--simrs-line);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(8,36,82,.05);
+}
+
+.simrs-stat-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+.simrs-chart-grid {
+    height: 222px;
+    background-image: linear-gradient(var(--simrs-line) 1px, transparent 1px), linear-gradient(90deg, var(--simrs-line) 1px, transparent 1px);
+    background-size: 100% 55px, 70px 100%;
+    border-bottom: 1px solid var(--simrs-line);
+    position: relative;
+}
+
+.simrs-chart-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.simrs-donut {
+    width: 170px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(#31c48d 0 32%, #3b82f6 32% 49%, #8b5cf6 49% 61%, #f59e0b 61% 71%, #14b8a6 71% 79%, #94a3b8 79% 100%);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.simrs-donut::after {
+    content: "";
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 88px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.simrs-donut span {
+    position: absolute;
+    z-index: 1;
+    color: var(--simrs-navy);
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.simrs-bor-ring {
+    width: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(var(--simrs-teal) 0 var(--bor-percent, 68%), #e8eef6 var(--bor-percent, 68%) 100%);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.simrs-bor-ring::after {
+    content: "";
+    width: 102px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--simrs-navy);
+    font-weight: 800;
+}
+
+.simrs-bor-ring span {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: var(--simrs-navy);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.simrs-bor-ring small {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.simrs-quick-button {
+    min-height: 54px;
+    border: 1px solid var(--simrs-line);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--simrs-navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-weight: 700;
+}
+
+.parking-occupancy-ring,
+.parking-donut {
+    width: 170px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.parking-occupancy-ring {
+    background: conic-gradient(#2f6fd9 0 var(--parking-occupancy), #31c48d var(--parking-occupancy) 100%);
+}
+
+.parking-occupancy-ring > div,
+.parking-donut > div {
+    width: 106px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--simrs-navy);
+    box-shadow: inset 0 0 0 1px var(--simrs-line);
+}
+
+.parking-occupancy-ring small,
+.parking-donut span,
+.parking-donut small {
+    color: #64748b;
+    font-weight: 700;
+}
+
+.parking-occupancy-ring strong,
+.parking-donut strong {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.parking-mini-progress {
+    width: 82px;
+    height: 8px;
+    border-radius: 999px;
+    background: #eef3f8;
+    overflow: hidden;
+}
+
+.parking-mini-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #37b778, #65c99c);
+}
+
+.parking-bar-chart {
+    height: 210px;
+    display: flex;
+    align-items: end;
+    gap: 18px;
+    padding: 20px 8px 0;
+    border-bottom: 1px solid var(--simrs-line);
+    background-image: linear-gradient(var(--simrs-line) 1px, transparent 1px);
+    background-size: 100% 48px;
+}
+
+.parking-bar-item {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.parking-bar {
+    width: 100%;
+    max-width: 36px;
+    min-height: 10px;
+    border-radius: 7px 7px 0 0;
+    background: linear-gradient(180deg, #7ed8ca 0%, #0f9f96 100%);
+}
+
+.parking-income-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    background: #effafa;
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.parking-income-summary span,
+.parking-summary-card span,
+.parking-summary-card small {
+    display: block;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.parking-income-summary strong,
+.parking-summary-card strong {
+    display: block;
+    color: var(--simrs-navy);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.parking-gate-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--simrs-line);
+}
+
+.parking-gate-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: #e7f9f0;
+    color: #159b62;
+}
+
+.parking-gate-icon.out {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.parking-summary-card {
+    min-height: 118px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.operator-income-chart {
+    min-height: 210px;
+    border-bottom: 1px solid var(--simrs-line);
+    background-image: linear-gradient(var(--simrs-line) 1px, transparent 1px);
+    background-size: 100% 48px;
+}
+
+.operator-income-chart svg {
+    display: block;
+    width: 100%;
+    height: 170px;
+}
+
+.operator-income-axis {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.operator-income-box {
+    min-height: 82px;
+    border-radius: 10px;
+    background: #effafa;
+    padding: 16px;
+}
+
+.operator-income-box span {
+    display: block;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.operator-income-box strong {
+    color: var(--simrs-navy);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.operator-gate-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--simrs-line);
+}
+
+.operator-gate-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: #159b62;
+    background: #e7f9f0;
+}
+
+.operator-gate-icon.out {
+    color: #dc2626;
+    background: #fee2e2;
+}
+
+.operator-gate-count {
+    min-width: 42px;
+    height: 36px;
+    border-radius: 9px;
+    display: inline-grid;
+    place-items: center;
+    color: #159b62;
+    background: #dff7eb;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.operator-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.operator-quick-card {
+    min-height: 112px;
+    border-radius: 10px;
+    background: var(--quick-bg);
+    color: var(--simrs-navy);
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 16px;
+    padding: 18px;
+    text-decoration: none;
+}
+
+.operator-quick-card span {
+    grid-row: span 2;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--quick-color);
+    background: rgba(255,255,255,.55);
+    font-size: 32px;
+}
+
+.operator-quick-card strong,
+.operator-quick-card small {
+    display: block;
+}
+
+.operator-quick-card strong {
+    color: var(--quick-color);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.operator-quick-card small {
+    color: var(--simrs-navy);
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .parking-income-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .parking-gate-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .operator-quick-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .operator-quick-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.simrs-quick-button span {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: #eef7ff;
+    color: var(--simrs-blue);
+}
+
+@media (max-width: 1100px) {
+    .simrs-auth-page {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+    .simrs-auth-hero { min-height: 520px; }
+}
+
+@media (max-width: 640px) {
+    .simrs-auth-page { padding: 16px; }
+    .simrs-auth-hero { display: none; }
+    .simrs-auth-card { padding: 32px 22px; }
+    .simrs-auth-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

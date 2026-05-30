@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /sim-rs/public/
+
+# Redirect browser requests that still expose the physical public directory.
+RewriteCond %{THE_REQUEST} \s/+sim-rs/public(?:[/?\s]) [NC]
+RewriteRule ^(.*)$ /sim-rs/$1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?route=$1 [QSA,L]

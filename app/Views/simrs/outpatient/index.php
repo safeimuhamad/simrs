@@ -1,0 +1,8 @@
+<div class="card bg-white rounded-10 border border-white mb-4">
+    <div class="p-20"><h3 class="mb-0">Rawat Jalan</h3><p class="text-body fs-14 mb-0">Daftar kunjungan untuk pemeriksaan dokter/perawat.</p></div>
+    <div class="p-20 border-top"><form class="row g-2"><input type="hidden" name="page" value="simrs-outpatient"><div class="col-md-10"><input class="form-control" name="search" value="<?= htmlspecialchars($search ?? '') ?>" placeholder="Cari kunjungan/pasien/dokter"></div><div class="col-md-2"><button class="btn btn-outline-primary w-100">Cari</button></div></form></div>
+    <div class="default-table-area mx-minus-1"><div class="table-responsive"><table class="table"><thead><tr><th>Kunjungan</th><th>Pasien</th><th>Poli</th><th>Dokter</th><th>Status</th><th>Aksi</th></tr></thead><tbody>
+    <?php foreach ($visits as $visit): ?><tr><td><?= htmlspecialchars($visit['visit_no']) ?></td><td><?= htmlspecialchars($visit['patient_name']) ?><br><small><?= htmlspecialchars($visit['medical_record_no']) ?></small></td><td><?= htmlspecialchars($visit['polyclinic_name']) ?></td><td><?= htmlspecialchars($visit['doctor_name'] ?: '-') ?></td><td><?= simrsStatusBadge($visit['status'] ?? '') ?></td><td><a class="btn btn-sm btn-primary text-white" href="<?= url('simrs-outpatient-examine', ['visit_id'=>$visit['id']]) ?>">Pemeriksaan</a></td></tr><?php endforeach; ?>
+    <?php if (empty($visits)): ?><tr><td colspan="6" class="text-center py-4">Tidak ada kunjungan.</td></tr><?php endif; ?>
+    </tbody></table></div><?= adminListFooter($baseRoute ?? 'simrs-outpatient', $search ?? '', $currentPage ?? 1, $totalPages ?? 1, $totalData ?? count($visits ?? []), $limit ?? 10) ?></div>
+</div>
